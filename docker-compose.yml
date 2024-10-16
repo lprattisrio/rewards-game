@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  rewards-game:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rewards-game-container
+    command: ["java", "-jar", "./rewards-game.jar", "--config", "./config.json", "--betting-amount", "100"]
